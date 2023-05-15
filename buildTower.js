@@ -27,11 +27,11 @@ function buildTower(floors) {
     let resultArray = []
     let spaces = 0
 
-    for(let i = floors; i > 0; i++) {
+    for(let i = floors; i > 0; i--) {
         resultArray.push(" ".repeat(spaces) + "*".repeat(i) + "*"
         .repeat(i-1) + " ".repeat(spaces))
         spaces++
     }
     return resultArray.reverse()
 }
-console.log(buildTower(13))
+console.log(buildTower(50))
